@@ -117,3 +117,62 @@ is transplied to
   background-color: blue;
 }
 ```
+######Deeply nested variable scope
+function change global scope
+```
+$bg-color: hsl(0, 100%, 25%); 
+%square { 
+    width: 100px; 
+    height: 100px; 
+} 
+@function set-color() { 
+    @if lightness($bg-color) > 20% { 
+        $bg-color: red !global;     //this changed global $bg-color from hsl(0, 100%, 25%) to red
+        @return black; 
+    } @else { 
+ 
+        @return white; 
+    } 
+} 
+@mixin colors() { 
+    background-color: $bg-color; 
+    color: set-color(); 
+} 
+.square1 { 
+    @extend %square; 
+    @include colors; 
+} 
+ .square2 { 
+    @extend %square; 
+    @include colors; 
+} .square3 { 
+    @extend %square; 
+    @include colors; 
+} 
+```
+will be compiled to
+```
+.square1, .square2, .square3 {
+  width: 100px;
+  height: 100px;
+}
+
+.square1 {
+  background-color: maroon;//first time, not changed
+  color: black;
+}
+
+.square2 {
+  background-color: red; //changed.
+  color: black;
+}
+
+.square3 {
+  background-color: red;
+  color: black;
+}
+```
+#####Making arrows in Sass
+(tbc)
+#####@content directive
+######Using @content for media queries
