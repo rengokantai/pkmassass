@@ -1,5 +1,12 @@
 ## pkmassass
 
+###Chapter 4. CSS and HTML – SMACSS
+Block Element Modifier (BEM)  
+####The good and the bad of CSS grids
+####Semantics
+Writing semantics HTML simply means our elements should be used for the purposes they were intended. 
+(tbc)
+
 ###Chapter 5. Advanced Sass
 ####Variables
 #####!default
@@ -176,3 +183,28 @@ will be compiled to
 (tbc)
 #####@content directive
 ######Using @content for media queries
+[Need to memorize sass functions](http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method)  
+memorize
+```
+map_remove
+map_has_key
+map_keys
+map_values
+map_merge
+map_get
+```
+###Chapter 6. Gulp
+####Setting up
+```
+compass create pkmassasspj6 --sass-dir=assets/scss --css-dir=assets/css
+mv screen.scss style.scss //delete all other 5 css/scss files 
+```
+add npm scripts
+```
+"sass:watch": "sass --watch --compass --style=expanded --line-comments --line-numbers --sourcemap=auto assets/scss/style.scss:assets/css/style.css", 
+"sass:compile": "sass --update --compass --sourcemaps=none --style=compressed --force assets/scss:assets/css" 
+```
+####Node.js, node-sass, and fileWatch
+3 callbacks: before reading scss, before transpile to css, after write css
+####Setting up Gulp
+(tbc)
