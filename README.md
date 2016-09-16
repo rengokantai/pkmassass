@@ -68,6 +68,13 @@ Pink  HSL(330, 100%, 50%)  RGB(255, 0, 127)
 Red  HSL(360, 100%, 50%)  RGB(255, 0, 0)  
 
 
+For saturation:  
+First, the lower the saturation, the less vivid the colors are. This means at 0%, the color will be completely void of color, therefore monochrome. This doesn't mean it will be black, it simply means it will be a grey hue. The grey will be dependent on how much lightness is set. At 100% saturation you will have full color.  
+
+For light:
+0% light gives you pure black, regardless of hue or saturation. 100% lightness gives you pure white, regardless of hue or saturation. 50% lightness will give you pure color and allow for hue and saturation to take full effect on the true color. 
+
+
 ###Chapter 5. Advanced Sass
 ####Variables
 #####!default
@@ -269,3 +276,13 @@ add npm scripts
 3 callbacks: before reading scss, before transpile to css, after write css
 ####Setting up Gulp
 (tbc)
+
+
+
+
+###Chapter 7. Sourcemaps – Editing and Saving
+####What are
+####Setting up Source Maps in Chrome
+F12->settings->Enable CSS source maps->save sass->Add folder workspace
+
+
