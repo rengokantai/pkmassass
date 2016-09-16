@@ -7,6 +7,67 @@ Block Element Modifier (BEM)
 Writing semantics HTML simply means our elements should be used for the purposes they were intended. 
 (tbc)
 
+
+####OOCSS - Object-Oriented CSS
+Ex: not organized
+```
+.box { 
+    background-color: red; 
+    border: 1px solid green; 
+    box-sizing: border-box; 
+    color: white; 
+    display: block; 
+    height: 10px; 
+    margin: 0 auto; 
+    padding: 10px; 
+    width: 10px; 
+} 
+```
+
+organize:
+```
+.box { 
+    /* Dimensions */ 
+    height: 10px; 
+    width: 10px; 
+    padding: 10px; 
+ 
+    /* Positioning */ 
+    box-sizing: border-box; 
+    display: block; 
+    margin: 0 auto; 
+ 
+    /* Theme */ 
+    background-color: red; 
+    border: 1px solid green; 
+    color: white; 
+} 
+```
+####SMACSS
+#####Base
+Base typography styling of h1 through h6, paragraphs, blockquotes, cite, pre, code, em, strong, ul, ol, dl, dt, li, input, label, button, anchor tags, and so on. There wouldn't be any classes or nested rules here.  
+
+#####Layout
+####Why aren't you using HSL?
+yellow:#ff0  
+purple:#7f00ff  
+
+all common colors:  
+Red  HSL(0, 100%, 50%)  RGB(255, 0, 0)  
+Orange  HSL(30, 100%, 50%)  RGB(255, 127, 0)  
+Yellow  HSL(60, 100%, 50%)  RGB(255, 255, 0)  
+Yellow-green (lime)  HSL(90, 100%, 50%)  RGB(127, 255, 0)  
+Green  HSL(120, 100%, 50%)  RGB(0, 255, 0)  
+Cyan-green (aqua)  HSL(150, 100%, 50%)  RGB(0, 255, 127)  
+Cyan  HSL(180, 100%, 50%)  RGB(0, 255, 255)  
+Cyan-blue (dark cyan)  HSL(210, 100%, 50%)  RGB(0, 127, 255)  
+Blue  HSL(240, 100%, 50%)  RGB(0, 0, 255)  
+Purple  HSL(270, 100%, 50%)  RGB(127, 0, 255)  
+Magenta  HSL(300, 100%, 50%)  RGB(255, 0, 255)  
+Pink  HSL(330, 100%, 50%)  RGB(255, 0, 127)  
+Red  HSL(360, 100%, 50%)  RGB(255, 0, 0)  
+
+
 ###Chapter 5. Advanced Sass
 ####Variables
 #####!default
